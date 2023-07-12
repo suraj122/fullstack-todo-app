@@ -102,7 +102,7 @@ app.delete("/todos/:id", (req, res) => {
         if (err) {
           throw err;
         } else {
-          res.status(200).send("Todo deleted");
+          res.status(200).json({ message: "Todo deleted" });
         }
       });
     } else {
